@@ -1,0 +1,89 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  height: 70px;
+
+  .header-page-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.25em;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #1987e8;
+  }
+
+  .header-items {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-search {
+    width: 400px;
+    height: 36px;
+
+    .searchBar {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    #searchQueryInput {
+      width: 100%;
+      height: 36px;
+      background-color: #fff;
+      color: #a9aaab;
+      outline: none;
+      border: none;
+      border-radius: 18px;
+      padding: 0 3.5rem 0 1.5rem;
+      text-align: left;
+      font-size: 0.75rem;
+    }
+
+    #searchQuerySubmit {
+      width: 3.5rem;
+      height: 2.3rem;
+      margin-left: -3.5rem;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    #searchQuerySubmit:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header-login,
+  .header-cart {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  .header-items li:not(.header-search) + li {
+    position: relative;
+  }
+
+  .header-items li:not(.header-search) + li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+  }
+
+  span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+}

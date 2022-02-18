@@ -1,0 +1,29 @@
+.sidenav {
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  background-color: #e31b23;
+  fill: #fff;
+  color: #fff;
+  height: 100vh;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.active {
+  color: #e31b23;
+  fill: blue !important;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 3px;
+}
