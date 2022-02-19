@@ -63,6 +63,7 @@
     display: flex;
     align-items: center;
     gap: 0.625rem;
+    cursor: pointer;
   }
 
   .header-items li:not(.header-search) + li {

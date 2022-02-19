@@ -1,4 +1,4 @@
-<article class="card-container">
+<article class="card-container" routerLink="/produto-descricao">
   <img src="{{ cardImg }}" alt="" />
   <h4 class="card-title">
     {{ cardTitle }}
@@ -7,7 +7,7 @@
     <span class="card-old-price"> {{ oldPrice }}</span>
     <span class="card-new-price">{{ newPrice }}</span>
   </p>
-  <a class="card-cta" href="#"> Comprar</a>
+  <a class="card-cta" routerLink="/carrinho"> Comprar</a>
 
   <span *ngIf="showPromotion" class="card-promo">Promoção disponível!</span>
 </article>

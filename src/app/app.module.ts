@@ -10,6 +10,8 @@ import { SliderComponent } from './shared/slider/slider.component';
 import { CardComponent } from './shared/card/card.component';
 import { TenisComponent } from './tenis/tenis.component';
 import { MeiasComponent } from './meias/meias.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutoDescricaoComponent } from './produto-descricao/produto-descricao.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MeiasComponent } from './meias/meias.component';
     SliderComponent,
     CardComponent,
     TenisComponent,
-    MeiasComponent
+    MeiasComponent,
+    CarrinhoComponent,
+    ProdutoDescricaoComponent
   ],
   imports: [
     BrowserModule,
