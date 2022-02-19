@@ -8,6 +8,8 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { HeadernavComponent } from './shared/headernav/headernav.component';
 import { SliderComponent } from './shared/slider/slider.component';
 import { CardComponent } from './shared/card/card.component';
+import { TenisComponent } from './tenis/tenis.component';
+import { MeiasComponent } from './meias/meias.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CardComponent } from './shared/card/card.component';
     SidenavComponent,
     HeadernavComponent,
     SliderComponent,
-    CardComponent
+    CardComponent,
+    TenisComponent,
+    MeiasComponent
   ],
   imports: [
     BrowserModule,
