@@ -66,6 +66,20 @@
     cursor: pointer;
   }
 
+  .header-cart {
+    position: relative;
+  }
+
+  .cart-items {
+    position: absolute;
+    padding: 2px 6px;
+    top: -4px;
+    background-color: #309e16;
+    color: #fff;
+    border-radius: 50%;
+    left: 12px;
+  }
+
   .header-items li:not(.header-search) + li {
     position: relative;
   }
