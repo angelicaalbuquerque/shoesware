@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tenis.component.scss'],
 })
 export class TenisComponent implements OnInit {
-  cardsList = [
+  tenisList = [
     {
       showPromotion: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',

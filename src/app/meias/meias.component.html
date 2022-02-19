@@ -1,1 +1,12 @@
-<p>meias works!</p>
+<h3 class="subtitle">Promoções em destaque</h3>
+
+<div class="card-list">
+  <app-card
+    *ngFor="let cardItem of meiasList"
+    [showPromotion]="cardItem.showPromotion"
+    [cardTitle]="cardItem.cardTitle"
+    [cardImg]="cardItem.imgUrl"
+    [oldPrice]="cardItem.oldPrice"
+    [newPrice]="cardItem.newPrice"
+  ></app-card>
+</div>
