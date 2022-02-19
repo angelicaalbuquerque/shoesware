@@ -1,0 +1,41 @@
+$primaryColor: #fff;
+$contrastColor: #2bb20b;
+
+.cart-empty {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-empty-info {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #5b5b5b;
+}
+
+p {
+  color: #5b5b5b;
+}
+
+.card-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  color: $primaryColor;
+  background: $contrastColor;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+
+  &:hover {
+    background: $primaryColor;
+    color: $contrastColor;
+  }
+}

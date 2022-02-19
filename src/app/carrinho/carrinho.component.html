@@ -1,1 +1,5 @@
-<p>carrinho works!</p>
+<div *ngIf="carrinho.length == 0" class="cart-empty">
+  <p class="cart-empty-info">Seu carrinho está vazio</p>
+  <p>Aproveite agora nossas promoções!</p>
+  <a class="card-cta" routerLink="/home">Começar a comprar agora</a>
+</div>
