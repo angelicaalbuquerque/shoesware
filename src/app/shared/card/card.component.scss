@@ -1,0 +1,79 @@
+$primaryColor: #2bb20b;
+$contrastColor: #fff;
+
+.card-container {
+  padding: 40px 20px 16px;
+  cursor: pointer;
+  background: $contrastColor;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px #00000029;
+  position: relative;
+  height: 100%;
+  border: 1px solid #f7f7f7;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-container:hover {
+  box-shadow: 0px 6px 12px #0000004a;
+}
+.card-container:hover .card-cta {
+  background: $primaryColor;
+  color: $contrastColor;
+}
+
+.card-title {
+  text-align: left;
+  color: #333333;
+}
+
+.card-old-price {
+  text-decoration: line-through;
+  color: #808080;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+
+.card-new-price {
+  color: #333333;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.card-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  color: $primaryColor;
+  background: $contrastColor;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+
+  &:hover {
+    background: $primaryColor;
+    color: $contrastColor;
+  }
+}
+
+.card-promo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  background: #828282;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}

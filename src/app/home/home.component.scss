@@ -1,1 +1,15 @@
+.subtitle {
+  color: #333333;
+  font-size: 1.125rem;
+  text-align: left;
+  font-weight: 600;
+}
 
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  // grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  justify-content: stretch;
+  align-items: stretch;
+}

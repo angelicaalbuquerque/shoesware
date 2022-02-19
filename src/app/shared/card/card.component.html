@@ -1,0 +1,13 @@
+<article class="card-container">
+  <img src="{{ cardImg }}" alt="" />
+  <h4 class="card-title">
+    {{ cardTitle }}
+  </h4>
+  <p>
+    <span class="card-old-price"> {{ oldPrice }}</span>
+    <span class="card-new-price">{{ newPrice }}</span>
+  </p>
+  <a class="card-cta" href="#"> Comprar</a>
+
+  <span *ngIf="showPromotion" class="card-promo">Promoção disponível!</span>
+</article>

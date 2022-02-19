@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { HeadernavComponent } from './shared/headernav/headernav.component';
+import { SliderComponent } from './shared/slider/slider.component';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SidenavComponent,
-    HeadernavComponent
+    HeadernavComponent,
+    SliderComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
