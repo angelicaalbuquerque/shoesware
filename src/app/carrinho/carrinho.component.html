@@ -3,3 +3,106 @@
   <p>Aproveite agora nossas promoções!</p>
   <a class="card-cta" routerLink="/home">Começar a comprar agora</a>
 </div>
+
+<div class="cart-container" *ngIf="carrinho.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="cart-item-image">Produto</th>
+        <th class="cart-item-quantity">Quantidade</th>
+        <th class="cart-item-price">Unitário</th>
+        <th class="cart-item-total">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of carrinho; let i = index">
+        <td class="cart-item-image">
+          <div class="content">
+            <img
+              [src]="item?.produto?.imagem"
+              alt="{{ item?.produto?.nome }}"
+            />
+            <div class="info">
+              <p class="product-name">
+                {{ item?.produto?.nome }}
+              </p>
+              <div>
+                <p>Cor: {{ item?.produto?.cor }}</p>
+                <p>Tamanho: {{ item?.produto?.tamanho }}</p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td class="cart-item-quantity">
+          <div class="input-field">
+            <button
+              (click)="decrementa(item)"
+              class="cart-item-quantity-button"
+            >
+              -
+            </button>
+            <input type="number" [(ngModel)]="item.quantidade" />
+            <button
+              (click)="incrementa(item)"
+              class="cart-item-quantity-button"
+            >
+              +
+            </button>
+          </div>
+
+          <button class="btn-remove" (click)="remove(i)">Remover</button>
+        </td>
+        <td class="cart-item-price">{{ item?.produto?.preco | currency }}</td>
+        <td class="cart-item-total">
+          {{ item.produto.preco * item.quantidade | currency }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="container-resumo">
+    <h4 class="card-title-resumo">RESUMO</h4>
+
+    <div class="content-body-resumo">
+      <div class="content-item-resumo">
+        <span class="label">Subtotal</span>
+        <span class="value">
+          {{ subtotal | currency }}
+        </span>
+      </div>
+      <div class="content-item-resumo">
+        <span class="label">Desconto</span>
+        <span class="value">
+          {{ desconto | currency }}
+        </span>
+      </div>
+      <div class="content-item-resumo main">
+        <span class="label">Total</span>
+        <span class="value">
+          {{ total | currency }}
+        </span>
+      </div>
+    </div>
+
+    <footer class="footer-actions-resumo">
+      <button class="card-cta warning">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5rem"
+          height="1.5rem"
+          fill="currentColor"
+          class="bi bi-cart3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+          />
+        </svg>
+        Continuar comprando
+      </button>
+      <button class="card-cta contained">Finalizar pedido</button>
+    </footer>
+  </div>
+</div>
+
+<!-- <button class="btn-remove" (click)="limparCarrinho()">Limpar carrinho</button> -->

@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,11 @@ import { MeiasComponent } from './meias/meias.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoDescricaoComponent } from './produto-descricao/produto-descricao.component';
 
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +30,13 @@ import { ProdutoDescricaoComponent } from './produto-descricao/produto-descricao
     TenisComponent,
     MeiasComponent,
     CarrinhoComponent,
-    ProdutoDescricaoComponent
+    ProdutoDescricaoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
