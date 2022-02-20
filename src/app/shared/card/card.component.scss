@@ -22,6 +22,10 @@ $contrastColor: #fff;
 .card-container:hover .card-cta {
   background: $primaryColor;
   color: $contrastColor;
+
+  svg {
+    fill: #ffffff;
+  }
 }
 
 .card-title {
