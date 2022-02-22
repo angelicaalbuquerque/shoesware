@@ -43,7 +43,12 @@
               >
                 -
               </button>
-              <input type="number" [(ngModel)]="item.quantidade" />
+              <input
+                type="number"
+                [(ngModel)]="item.quantidade"
+                min="0"
+                (change)="atualizarQuantidade(item, i)"
+              />
               <button
                 (click)="incrementa(item)"
                 class="cart-item-quantity-button"
@@ -52,7 +57,7 @@
               </button>
             </div>
 
-            <button class="btn-remove" (click)="remove(i)">Remover</button>
+            <button class="btn-remove" (click)="remove(i)">remover</button>
           </td>
           <td class="cart-item-price">{{ item?.produto?.preco | currency }}</td>
           <td class="cart-item-total">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -6,67 +7,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrinho.component.scss'],
 })
 export class CarrinhoComponent implements OnInit {
-  carrinho: Produto[] = [
-    {
-      produto: {
-        nome: 'Produto 1',
-        cor: 'branco',
-        tamanho: 36,
-        preco: 24,
-        imagem: '/assets/img/produtos/tenis/tenis-branco.png',
-      },
-      quantidade: 1,
-    },
-    {
-      produto: {
-        nome: 'Produto 2',
-        cor: 'preto',
-        tamanho: 36,
-        preco: 10,
-        imagem: '/assets/img/produtos/tenis/tenis-azul.png',
-      },
-      quantidade: 4,
-    },
-    {
-      produto: {
-        nome: 'Produto 3',
-        cor: 'marrom',
-        tamanho: 40,
-        preco: 15,
-        imagem: '/assets/img/produtos/tenis/tenis-preto.png',
-      },
-      quantidade: 2,
-    },
-  ];
+  carrinho: Produto[] = [];
 
   subtotal = 0;
   desconto = 0;
   total = 0;
 
-  constructor() {}
+  constructor(private carrinhoService: CarrinhoService) {}
 
   ngOnInit(): void {
-    this.calcular();
+    this.carrinhoService.getCarrinho().subscribe((carrinho) => {
+      console.log(carrinho);
+      this.carrinho = carrinho;
+
+      this.calcular();
+    });
   }
 
   decrementa(produto: Produto) {
-    if (produto.quantidade < 1) {
-      return;
-    }
-
-    produto.quantidade--;
-
-    this.calcular();
+    this.carrinhoService.decrementar(produto);
   }
 
   incrementa(produto: Produto) {
-    produto.quantidade++;
-    this.calcular();
+    this.carrinhoService.incrementar(produto);
   }
+
   remove(index: number) {
-    console.log(index);
-    this.carrinho.splice(index, 1);
-    this.calcular();
+    this.carrinhoService.removerProduto(index);
+  }
+
+  atualizarQuantidade(produto: any, index: number) {
+    this.carrinhoService.atualizarProduto(produto, index);
   }
 
   calcular() {
@@ -92,11 +63,11 @@ export class CarrinhoComponent implements OnInit {
   }
 
   limparCarrinho() {
-    this.carrinho = [];
+    this.carrinhoService.limparCarrinho();
   }
 }
 
-interface Produto {
+export interface Produto {
   produto: {
     nome: string;
     cor: string;
