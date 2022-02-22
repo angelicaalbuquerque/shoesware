@@ -5,61 +5,68 @@
 </div>
 
 <div class="cart-container" *ngIf="carrinho.length > 0">
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="cart-item-image">Produto</th>
-        <th class="cart-item-quantity">Quantidade</th>
-        <th class="cart-item-price">Unitário</th>
-        <th class="cart-item-total">Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of carrinho; let i = index">
-        <td class="cart-item-image">
-          <div class="content">
-            <img
-              [src]="item?.produto?.imagem"
-              alt="{{ item?.produto?.nome }}"
-            />
-            <div class="info">
-              <p class="product-name">
-                {{ item?.produto?.nome }}
-              </p>
-              <div>
-                <p>Cor: {{ item?.produto?.cor }}</p>
-                <p>Tamanho: {{ item?.produto?.tamanho }}</p>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="cart-item-image">Produto</th>
+          <th class="cart-item-quantity">Quantidade</th>
+          <th class="cart-item-price">Unitário</th>
+          <th class="cart-item-total">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of carrinho; let i = index">
+          <td class="cart-item-image">
+            <div class="content">
+              <img
+                [src]="item?.produto?.imagem"
+                alt="{{ item?.produto?.nome }}"
+              />
+              <div class="info">
+                <p class="product-name">
+                  {{ item?.produto?.nome }}
+                </p>
+                <div>
+                  <p>Cor: {{ item?.produto?.cor }}</p>
+                  <p>Tamanho: {{ item?.produto?.tamanho }}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </td>
+          </td>
 
-        <td class="cart-item-quantity">
-          <div class="input-field">
-            <button
-              (click)="decrementa(item)"
-              class="cart-item-quantity-button"
-            >
-              -
-            </button>
-            <input type="number" [(ngModel)]="item.quantidade" />
-            <button
-              (click)="incrementa(item)"
-              class="cart-item-quantity-button"
-            >
-              +
-            </button>
-          </div>
+          <td class="cart-item-quantity">
+            <div class="input-field">
+              <button
+                (click)="decrementa(item)"
+                class="cart-item-quantity-button"
+              >
+                -
+              </button>
+              <input type="number" [(ngModel)]="item.quantidade" />
+              <button
+                (click)="incrementa(item)"
+                class="cart-item-quantity-button"
+              >
+                +
+              </button>
+            </div>
 
-          <button class="btn-remove" (click)="remove(i)">Remover</button>
-        </td>
-        <td class="cart-item-price">{{ item?.produto?.preco | currency }}</td>
-        <td class="cart-item-total">
-          {{ item.produto.preco * item.quantidade | currency }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            <button class="btn-remove" (click)="remove(i)">Remover</button>
+          </td>
+          <td class="cart-item-price">{{ item?.produto?.preco | currency }}</td>
+          <td class="cart-item-total">
+            {{ item.produto.preco * item.quantidade | currency }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="container-btn-clean">
+      <button class="btn-remove" (click)="limparCarrinho()">
+        Limpar carrinho
+      </button>
+    </div>
+  </div>
   <div class="container-resumo">
     <h4 class="card-title-resumo">RESUMO</h4>
 
@@ -104,5 +111,3 @@
     </footer>
   </div>
 </div>
-
-<!-- <button class="btn-remove" (click)="limparCarrinho()">Limpar carrinho</button> -->

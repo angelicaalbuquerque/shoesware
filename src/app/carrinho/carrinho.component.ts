@@ -23,7 +23,7 @@ export class CarrinhoComponent implements OnInit {
         cor: 'preto',
         tamanho: 36,
         preco: 10,
-        imagem: '/assets/img/produtos/tenis/tenis-branco.png',
+        imagem: '/assets/img/produtos/tenis/tenis-azul.png',
       },
       quantidade: 4,
     },
@@ -33,7 +33,7 @@ export class CarrinhoComponent implements OnInit {
         cor: 'marrom',
         tamanho: 40,
         preco: 15,
-        imagem: '/assets/img/produtos/tenis/tenis-branco.png',
+        imagem: '/assets/img/produtos/tenis/tenis-preto.png',
       },
       quantidade: 2,
     },
@@ -49,11 +49,17 @@ export class CarrinhoComponent implements OnInit {
     this.calcular();
   }
 
-  decrementa(produto: any) {
+  decrementa(produto: Produto) {
+    if (produto.quantidade < 1) {
+      return;
+    }
+
     produto.quantidade--;
+
     this.calcular();
   }
-  incrementa(produto: any) {
+
+  incrementa(produto: Produto) {
     produto.quantidade++;
     this.calcular();
   }
@@ -75,8 +81,6 @@ export class CarrinhoComponent implements OnInit {
     });
 
     this.subtotal = subtotal;
-
-    console.log(this.subtotal);
 
     this.total = this.subtotal - this.desconto;
   }

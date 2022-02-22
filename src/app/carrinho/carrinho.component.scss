@@ -106,10 +106,6 @@ td {
   }
 }
 
-img {
-  width: 100%;
-}
-
 .cart-item-quantity {
   width: 10%;
 
@@ -136,13 +132,13 @@ img {
       border: 1px solid #f0f0f0;
     }
   }
+}
 
-  .btn-remove {
-    background: transparent;
-    margin-top: 10px;
-    border: none;
-    text-decoration: underline;
-  }
+.btn-remove {
+  background: transparent;
+  margin-top: 10px;
+  border: none;
+  text-decoration: underline;
 }
 
 .cart-item-price {
@@ -227,4 +223,9 @@ tr {
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+
+.container-btn-clean {
+  display: flex;
+  justify-content: flex-end;
 }
