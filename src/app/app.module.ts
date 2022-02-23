@@ -16,6 +16,7 @@ import { ProdutoDescricaoComponent } from './produto-descricao/produto-descricao
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { PromocaoComponent } from './promocao/promocao.component';
 
 registerLocaleData(ptBr);
 
@@ -31,6 +32,7 @@ registerLocaleData(ptBr);
     MeiasComponent,
     CarrinhoComponent,
     ProdutoDescricaoComponent,
+    PromocaoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
