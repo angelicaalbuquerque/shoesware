@@ -7,18 +7,30 @@ import { Produto } from '../carrinho/carrinho.component';
   providedIn: 'root',
 })
 export class CarrinhoService {
-  private _carrinho: any[] = carrinhoMock;
+  private _carrinho: Produto[] = [];
+  private _chave: string = '@Siteware';
+
   carrinho: BehaviorSubject<any> = new BehaviorSubject(this._carrinho);
 
-  constructor() {}
+  constructor() {
+    this._buscarCarrinhoLocalStorage();
+  }
 
   getCarrinho() {
     return this.carrinho.asObservable();
   }
 
   adicionarProduto(produto: Produto) {
-    this._carrinho.push(produto);
-    this._emitir();
+    const index = this._carrinho.findIndex(
+      (x) => x.produto.nome === produto.produto.nome
+    );
+    if (index >= 0) {
+      this._carrinho[index].quantidade++;
+      this.atualizarProduto(this._carrinho[index], index);
+    } else {
+      this._carrinho.push(produto);
+      this._emitir();
+    }
   }
 
   atualizarProduto(produto: Produto, index: number) {
@@ -51,7 +63,21 @@ export class CarrinhoService {
   }
 
   private _emitir() {
+    this._salvarLocalStorage();
     this.carrinho.next(this._carrinho);
+  }
+
+  private _salvarLocalStorage() {
+    localStorage.setItem(this._chave, JSON.stringify(this._carrinho));
+  }
+
+  private _buscarCarrinhoLocalStorage() {
+    const dados = localStorage.getItem(this._chave);
+    if (dados) {
+      this._carrinho = JSON.parse(dados);
+    } else {
+      this._carrinho = [];
+    }
   }
 }
 

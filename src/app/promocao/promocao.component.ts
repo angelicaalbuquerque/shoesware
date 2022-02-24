@@ -11,15 +11,19 @@ export class PromocaoComponent implements OnInit {
       showPromotion: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
       cardTitle: 'Tênis Nike Revolution 5 - Feminino',
-      oldPrice: 'R$ 319,99',
-      newPrice: 'R$ 219,99',
+      oldPrice: 319.99,
+      newPrice: 219.99,
+      cardSize: 36,
+      cardColour: 'Branco',
     },
     {
       showPromotion: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
-      oldPrice: 'R$ 24,99',
-      newPrice: 'R$ 19,99',
+      oldPrice: 24.99,
+      newPrice: 19.99,
+      cardSize: 36,
+      cardColour: 'Cinza Mescla',
     },
   ];
 

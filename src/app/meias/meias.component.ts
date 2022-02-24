@@ -11,15 +11,19 @@ export class MeiasComponent implements OnInit {
       showPromotion: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
-      oldPrice: 'R$ 24,99',
-      newPrice: 'R$ 19,99',
+      oldPrice: 24.99,
+      newPrice: 19.99,
+      cardSize: 36,
+      cardColour: 'Cinza Mescla',
     },
     {
       showPromotion: false,
       imgUrl: '/assets/img/produtos/meias/meia-branca.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
-      oldPrice: 'R$ 24,99',
-      newPrice: 'R$ 19,99',
+      oldPrice: 24.99,
+      newPrice: 19.99,
+      cardSize: 42,
+      cardColour: 'Branco',
     },
   ];
 
