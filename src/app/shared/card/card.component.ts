@@ -26,6 +26,7 @@ export class CardComponent implements OnInit {
         cor: this.cardColour,
         tamanho: this.cardSize,
         preco: this.newPrice,
+        precoAntigo: this.oldPrice,
         imagem: this.cardImg,
       },
       quantidade: 1,

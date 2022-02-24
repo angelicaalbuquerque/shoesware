@@ -47,8 +47,11 @@ export class CarrinhoComponent implements OnInit {
 
   private _calcularTotal() {
     let subtotal = 0;
+    let subtotalAntigo = 0;
+
     this.carrinho.forEach((produto) => {
       subtotal += produto.quantidade * produto.produto.preco;
+      subtotalAntigo += produto.quantidade * produto.produto.precoAntigo;
     });
 
     this.subtotal = subtotal;
@@ -73,6 +76,7 @@ export interface Produto {
     cor: string;
     tamanho: number;
     preco: number;
+    precoAntigo: number;
     imagem: string;
   };
   quantidade: number;

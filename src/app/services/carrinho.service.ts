@@ -75,6 +75,7 @@ export class CarrinhoService {
     const dados = localStorage.getItem(this._chave);
     if (dados) {
       this._carrinho = JSON.parse(dados);
+      this._emitir();
     } else {
       this._carrinho = [];
     }

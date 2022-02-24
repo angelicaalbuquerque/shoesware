@@ -59,9 +59,23 @@
 
             <button class="btn-remove" (click)="remove(i)">remover</button>
           </td>
-          <td class="cart-item-price">{{ item?.produto?.preco | currency }}</td>
+
+          <td class="cart-item-price">
+            <div class="cart-item-old-price">
+              {{ item?.produto?.precoAntigo | currency }}
+            </div>
+            <div>
+              {{ item?.produto?.preco | currency }}
+            </div>
+          </td>
+
           <td class="cart-item-total">
-            {{ item.produto.preco * item.quantidade | currency }}
+            <div class="cart-item-total-old-price">
+              {{ item.produto.precoAntigo * item.quantidade | currency }}
+            </div>
+            <div>
+              {{ item.produto.preco * item.quantidade | currency }}
+            </div>
           </td>
         </tr>
       </tbody>

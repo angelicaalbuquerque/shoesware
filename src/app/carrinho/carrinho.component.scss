@@ -144,6 +144,13 @@ td {
 .cart-item-price {
   width: 20%;
 }
+
+.cart-item-old-price,
+.cart-item-total-old-price {
+  text-decoration: line-through;
+  font-size: 0.75rem;
+  text-align: center;
+}
 .cart-item-total {
   width: 20%;
 }

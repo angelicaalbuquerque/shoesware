@@ -5,8 +5,8 @@
       {{ cardTitle }}
     </h4>
     <p>
-      <span class="card-old-price"> {{ oldPrice }}</span>
-      <span class="card-new-price">{{ newPrice }}</span>
+      <span class="card-old-price"> {{ oldPrice | currency }} </span>
+      <span class="card-new-price">{{ newPrice | currency }} </span>
     </p>
   </div>
 
