@@ -1,30 +1,30 @@
 <div *ngIf="carrinho.length == 0" class="cart-empty">
-  <p class="cart-empty-info">Seu carrinho está vazio</p>
+  <p class="carrinho-vazio">Seu carrinho está vazio</p>
   <p>Aproveite agora nossas promoções!</p>
   <a class="card-cta" routerLink="/home">Começar a comprar agora</a>
 </div>
 
-<div class="cart-container" *ngIf="carrinho.length > 0">
+<div class="carrinho-container" *ngIf="carrinho.length > 0">
   <div>
     <table class="table">
       <thead>
         <tr>
-          <th class="cart-item-image">Produto</th>
-          <th class="cart-item-quantity">Quantidade</th>
-          <th class="cart-item-price">Unitário</th>
+          <th class="carrinho-item-imagem">Produto</th>
+          <th class="carrinho-item-quantidade">Quantidade</th>
+          <th class="carrinho-item-preco">Unitário</th>
           <th class="cart-item-total">Total</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let item of carrinho; let i = index">
-          <td class="cart-item-image">
+          <td class="carrinho-item-imagem">
             <div class="content">
               <img
                 [src]="item?.produto?.imagem"
                 alt="{{ item?.produto?.nome }}"
               />
               <div class="info">
-                <p class="product-name">
+                <p class="produto-nome">
                   {{ item?.produto?.nome }}
                 </p>
                 <div>
@@ -35,11 +35,11 @@
             </div>
           </td>
 
-          <td class="cart-item-quantity">
+          <td class="carrinho-item-quantidade">
             <div class="input-field">
               <button
                 (click)="decrementa(item)"
-                class="cart-item-quantity-button"
+                class="carrinho-item-quantidade-button"
               >
                 -
               </button>
@@ -51,17 +51,17 @@
               />
               <button
                 (click)="incrementa(item)"
-                class="cart-item-quantity-button"
+                class="carrinho-item-quantidade-button"
               >
                 +
               </button>
             </div>
 
-            <button class="btn-remove" (click)="remove(i)">remover</button>
+            <button class="btn-remover" (click)="remove(i)">remover</button>
           </td>
 
-          <td class="cart-item-price">
-            <div class="cart-item-old-price">
+          <td class="carrinho-item-preco">
+            <div class="carrinho-item-precos">
               {{ item?.produto?.precoAntigo | currency }}
             </div>
             <div>
@@ -70,7 +70,7 @@
           </td>
 
           <td class="cart-item-total">
-            <div class="cart-item-total-old-price">
+            <div class="carrinho-item-total-precos">
               {{ item.produto.precoAntigo * item.quantidade | currency }}
             </div>
             <div>
@@ -80,8 +80,8 @@
         </tr>
       </tbody>
     </table>
-    <div class="container-btn-clean">
-      <button class="btn-remove" (click)="limparCarrinho()">
+    <div class="container-btn-limpar">
+      <button class="btn-remover" (click)="limparCarrinho()">
         Limpar carrinho
       </button>
     </div>
@@ -110,7 +110,7 @@
       </div>
     </div>
 
-    <footer class="footer-actions-resumo">
+    <footer class="footer-resumo">
       <button class="card-cta warning" routerLink="/home">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@
         </svg>
         Continuar comprando
       </button>
-      <button class="card-cta contained">Finalizar pedido</button>
+      <button class="card-cta">Finalizar pedido</button>
     </footer>
   </div>
 </div>
