@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meias.component.scss'],
 })
 export class MeiasComponent implements OnInit {
-  meiasList = [
+  meiasLista = [
     {
       mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       titulo: 'Meia Asics Single Tech - Adulto',
+      descricao: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
       tamanho: 36,
@@ -20,6 +21,7 @@ export class MeiasComponent implements OnInit {
       mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/meias/meia-branca.png',
       titulo: 'Meia Asics Single Tech - Adulto',
+      descricao: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
       tamanho: 42,
