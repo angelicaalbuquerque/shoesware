@@ -13,7 +13,7 @@ export class PromocaoComponent implements OnInit {
       titulo: 'Tênis Nike Revolution 5 - Feminino',
       precoAntigo: 319.99,
       precoAtual: 219.99,
-      cardSize: 36,
+      tamanho: 36,
       cardColour: 'Branco',
     },
     {
@@ -22,7 +22,7 @@ export class PromocaoComponent implements OnInit {
       titulo: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
-      cardSize: 36,
+      tamanho: 36,
       cardColour: 'Cinza Mescla',
     },
   ];

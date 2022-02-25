@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
       precoAntigo: 319.99,
       precoAtual: 219.99,
       cardColour: 'Branco',
-      cardSize: 36,
+      tamanho: 36,
     },
     {
       mostrarPromocao: true,
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
       precoAntigo: 24.99,
       precoAtual: 19.99,
       cardColour: 'Cinza Mescla',
-      cardSize: 36,
+      tamanho: 36,
     },
     {
       mostrarPromocao: false,
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
       precoAntigo: 249.99,
       precoAtual: 199.99,
       cardColour: 'Preto',
-      cardSize: 36,
+      tamanho: 36,
     },
     {
       mostrarPromocao: false,
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
       precoAntigo: 249.99,
       precoAtual: 199.99,
       cardColour: 'Azul',
-      cardSize: 36,
+      tamanho: 36,
     },
   ];
 

@@ -13,7 +13,7 @@ export class TenisComponent implements OnInit {
       titulo: 'Tênis Nike Revolution 5 - Feminino',
       precoAntigo: 319.99,
       precoAtual: 219.99,
-      cardSize: 36,
+      tamanho: 36,
       cardColour: 'Branco',
     },
     {
@@ -22,7 +22,7 @@ export class TenisComponent implements OnInit {
       titulo: 'Tênis Adidas Lite Racer - Masculino',
       precoAntigo: 249.99,
       precoAtual: 199.99,
-      cardSize: 36,
+      tamanho: 36,
       cardColour: 'Preto',
     },
     {
@@ -31,7 +31,7 @@ export class TenisComponent implements OnInit {
       titulo: 'Tênis Puma - Masculino',
       precoAntigo: 249.99,
       precoAtual: 199.99,
-      cardSize: 36,
+      tamanho: 36,
       cardColour: 'Azul',
     },
   ];

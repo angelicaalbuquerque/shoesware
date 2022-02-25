@@ -13,7 +13,7 @@ export class MeiasComponent implements OnInit {
       titulo: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
-      cardSize: 36,
+      tamanho: 36,
       cardColour: 'Cinza Mescla',
     },
     {
@@ -22,7 +22,7 @@ export class MeiasComponent implements OnInit {
       titulo: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
-      cardSize: 42,
+      tamanho: 42,
       cardColour: 'Branco',
     },
   ];

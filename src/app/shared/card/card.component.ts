@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   @Input() titulo: string = '';
   @Input() cardImg: string = '';
   @Input() cardColour: string = '';
-  @Input() cardSize: number = 0;
+  @Input() tamanho: number = 0;
   @Input() precoAntigo: number = 0;
   @Input() precoAtual: number = 0;
 
@@ -24,7 +24,7 @@ export class CardComponent implements OnInit {
       produto: {
         nome: this.titulo,
         cor: this.cardColour,
-        tamanho: this.cardSize,
+        tamanho: this.tamanho,
         preco: this.precoAtual,
         precoAntigo: this.precoAntigo,
         imagem: this.cardImg,
