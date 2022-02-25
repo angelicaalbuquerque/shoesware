@@ -25,19 +25,19 @@ $contrastColor: #fff;
   color: $contrastColor;
 }
 
-.card-title {
+.card-titulo {
   text-align: left;
   color: #333333;
 }
 
-.card-old-price {
+.card-preco-antigo {
   text-decoration: line-through;
   color: #808080;
   font-size: 0.75rem;
   margin-right: 10px;
 }
 
-.card-new-price {
+.card-preco-atual {
   color: #333333;
   font-weight: 600;
   font-size: 1rem;

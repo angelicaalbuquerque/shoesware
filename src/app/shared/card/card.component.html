@@ -1,12 +1,12 @@
 <article class="card-container" routerLink="/produto-descricao">
   <div>
-    <img src="{{ cardImg }}" alt="" />
-    <h4 class="card-title">
+    <img src="{{ cardImg }}" alt="{{ imagemDescricao }}" />
+    <h4 class="card-titulo">
       {{ titulo }}
     </h4>
     <p>
-      <span class="card-old-price"> {{ precoAntigo | currency }} </span>
-      <span class="card-new-price">{{ precoAtual | currency }} </span>
+      <span class="card-preco-antigo"> {{ precoAntigo | currency }} </span>
+      <span class="card-preco-atual">{{ precoAtual | currency }} </span>
     </p>
   </div>
 

@@ -77,6 +77,7 @@ export interface Produto {
     preco: number;
     precoAntigo: number;
     imagem: string;
+    imagemDescricao: string;
   };
   quantidade: number;
 }

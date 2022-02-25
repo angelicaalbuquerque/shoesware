@@ -10,6 +10,7 @@ export class CardComponent implements OnInit {
   @Input('mostrarPromocao') mostrarPromocao: boolean = false;
   @Input() titulo: string = '';
   @Input() cardImg: string = '';
+  @Input() imagemDescricao: string = '';
   @Input() cor: string = '';
   @Input() tamanho: number = 0;
   @Input() precoAntigo: number = 0;
@@ -28,6 +29,7 @@ export class CardComponent implements OnInit {
         preco: this.precoAtual,
         precoAntigo: this.precoAntigo,
         imagem: this.cardImg,
+        imagemDescricao: this.imagemDescricao,
       },
       quantidade: 1,
     });
