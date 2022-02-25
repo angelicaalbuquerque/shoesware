@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./promocao.component.scss'],
 })
 export class PromocaoComponent implements OnInit {
-  promocaoList = [
+  promocaoLista = [
     {
       mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
       titulo: 'Tênis Nike Revolution 5 - Feminino',
+      imagemDescricao: 'Tênis Nike Revolution 5 - Feminino',
       precoAntigo: 319.99,
       precoAtual: 219.99,
       tamanho: 36,
@@ -20,6 +21,7 @@ export class PromocaoComponent implements OnInit {
       mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       titulo: 'Meia Asics Single Tech - Adulto',
+      imagemDescricao: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
       tamanho: 36,

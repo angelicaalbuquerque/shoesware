@@ -2,7 +2,7 @@
 
 <div class="promo-container">
   <div class="promo-box">
-    <p class="promo-box-description">
+    <p class="promo-box-descricao">
       Compre 2 unidades do Tênis Nike Revolution 5 - Feminino e Pague apenas o
       valor de 1
     </p>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="promo-box">
-    <p class="promo-box-description">
+    <p class="promo-box-descricao">
       3 pares de Meia Asics Single Tech - Adulto por apenas R$10,00
     </p>
 
@@ -20,10 +20,11 @@
 
 <div class="card-lista">
   <app-card
-    *ngFor="let cardItem of promocaoList"
+    *ngFor="let cardItem of promocaoLista"
     [mostrarPromocao]="cardItem.mostrarPromocao"
     [titulo]="cardItem.titulo"
     [cardImg]="cardItem.imgUrl"
+    [imagemDescricao]="cardItem.imagemDescricao"
     [precoAntigo]="cardItem.precoAntigo"
     [precoAtual]="cardItem.precoAtual"
     [tamanho]="cardItem.tamanho"
