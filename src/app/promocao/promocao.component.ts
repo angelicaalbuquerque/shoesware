@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PromocaoComponent implements OnInit {
   promocaoList = [
     {
-      showPromotion: true,
+      mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
       cardTitle: 'Tênis Nike Revolution 5 - Feminino',
       oldPrice: 319.99,
@@ -17,7 +17,7 @@ export class PromocaoComponent implements OnInit {
       cardColour: 'Branco',
     },
     {
-      showPromotion: true,
+      mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
       oldPrice: 24.99,

@@ -7,7 +7,7 @@ import { CarrinhoService } from 'src/app/services/carrinho.service';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input('showPromotion') showPromotion: boolean = false;
+  @Input('mostrarPromocao') mostrarPromocao: boolean = false;
   @Input() cardTitle: string = '';
   @Input() cardImg: string = '';
   @Input() cardColour: string = '';

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   cardsList = [
     {
-      showPromotion: true,
+      mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
       cardTitle: 'Tênis Nike Revolution 5 - Feminino',
       oldPrice: 319.99,
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
       cardSize: 36,
     },
     {
-      showPromotion: true,
+      mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
       oldPrice: 24.99,
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
       cardSize: 36,
     },
     {
-      showPromotion: false,
+      mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-preto.png',
       cardTitle: 'Tênis Adidas Lite Racer - Masculino',
       oldPrice: 249.99,
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       cardSize: 36,
     },
     {
-      showPromotion: false,
+      mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-azul.png',
       cardTitle: 'Tênis Puma - Masculino',
       oldPrice: 249.99,

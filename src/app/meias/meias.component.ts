@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MeiasComponent implements OnInit {
   meiasList = [
     {
-      showPromotion: true,
+      mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
       oldPrice: 24.99,
@@ -17,7 +17,7 @@ export class MeiasComponent implements OnInit {
       cardColour: 'Cinza Mescla',
     },
     {
-      showPromotion: false,
+      mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/meias/meia-branca.png',
       cardTitle: 'Meia Asics Single Tech - Adulto',
       oldPrice: 24.99,

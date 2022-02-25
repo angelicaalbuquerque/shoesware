@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TenisComponent implements OnInit {
   tenisList = [
     {
-      showPromotion: true,
+      mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
       cardTitle: 'Tênis Nike Revolution 5 - Feminino',
       oldPrice: 319.99,
@@ -17,7 +17,7 @@ export class TenisComponent implements OnInit {
       cardColour: 'Branco',
     },
     {
-      showPromotion: false,
+      mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-preto.png',
       cardTitle: 'Tênis Adidas Lite Racer - Masculino',
       oldPrice: 249.99,
@@ -26,7 +26,7 @@ export class TenisComponent implements OnInit {
       cardColour: 'Preto',
     },
     {
-      showPromotion: false,
+      mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-azul.png',
       cardTitle: 'Tênis Puma - Masculino',
       oldPrice: 249.99,
