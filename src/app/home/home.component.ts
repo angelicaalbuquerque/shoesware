@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
     {
       mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
-      cardTitle: 'Tênis Nike Revolution 5 - Feminino',
+      cardTitulo: 'Tênis Nike Revolution 5 - Feminino',
       oldPrice: 319.99,
       newPrice: 219.99,
       cardColour: 'Branco',
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     {
       mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/meias/meia-preta.png',
-      cardTitle: 'Meia Asics Single Tech - Adulto',
+      cardTitulo: 'Meia Asics Single Tech - Adulto',
       oldPrice: 24.99,
       newPrice: 19.99,
       cardColour: 'Cinza Mescla',
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     {
       mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-preto.png',
-      cardTitle: 'Tênis Adidas Lite Racer - Masculino',
+      cardTitulo: 'Tênis Adidas Lite Racer - Masculino',
       oldPrice: 249.99,
       newPrice: 199.99,
       cardColour: 'Preto',
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
     {
       mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-azul.png',
-      cardTitle: 'Tênis Puma - Masculino',
+      cardTitulo: 'Tênis Puma - Masculino',
       oldPrice: 249.99,
       newPrice: 199.99,
       cardColour: 'Azul',

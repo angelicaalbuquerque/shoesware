@@ -10,7 +10,7 @@ export class TenisComponent implements OnInit {
     {
       mostrarPromocao: true,
       imgUrl: '/assets/img/produtos/tenis/tenis-branco.png',
-      cardTitle: 'Tênis Nike Revolution 5 - Feminino',
+      cardTitulo: 'Tênis Nike Revolution 5 - Feminino',
       oldPrice: 319.99,
       newPrice: 219.99,
       cardSize: 36,
@@ -19,7 +19,7 @@ export class TenisComponent implements OnInit {
     {
       mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-preto.png',
-      cardTitle: 'Tênis Adidas Lite Racer - Masculino',
+      cardTitulo: 'Tênis Adidas Lite Racer - Masculino',
       oldPrice: 249.99,
       newPrice: 199.99,
       cardSize: 36,
@@ -28,7 +28,7 @@ export class TenisComponent implements OnInit {
     {
       mostrarPromocao: false,
       imgUrl: '/assets/img/produtos/tenis/tenis-azul.png',
-      cardTitle: 'Tênis Puma - Masculino',
+      cardTitulo: 'Tênis Puma - Masculino',
       oldPrice: 249.99,
       newPrice: 199.99,
       cardSize: 36,
