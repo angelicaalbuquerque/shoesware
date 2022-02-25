@@ -1,4 +1,4 @@
-<div *ngIf="carrinho.length == 0" class="cart-empty">
+<div *ngIf="carrinho.length == 0" class="carrinho-vazio-container">
   <p class="carrinho-vazio">Seu carrinho está vazio</p>
   <p>Aproveite agora nossas promoções!</p>
   <a class="card-cta" routerLink="/home">Começar a comprar agora</a>
@@ -12,7 +12,7 @@
           <th class="carrinho-item-imagem">Produto</th>
           <th class="carrinho-item-quantidade">Quantidade</th>
           <th class="carrinho-item-preco">Unitário</th>
-          <th class="cart-item-total">Total</th>
+          <th class="carrinho-item-total">Total</th>
         </tr>
       </thead>
       <tbody>
@@ -64,16 +64,16 @@
             <div class="carrinho-item-precos">
               {{ item?.produto?.precoAntigo | currency }}
             </div>
-            <div>
+            <div class="carrinho-item-precos-bold">
               {{ item?.produto?.preco | currency }}
             </div>
           </td>
 
-          <td class="cart-item-total">
+          <td class="carrinho-item-total">
             <div class="carrinho-item-total-precos">
               {{ item.produto.precoAntigo * item.quantidade | currency }}
             </div>
-            <div>
+            <div class="carrinho-item-precos-bold">
               {{ item.produto.preco * item.quantidade | currency }}
             </div>
           </td>
@@ -87,7 +87,7 @@
     </div>
   </div>
   <div class="container-resumo">
-    <h4 class="card-titulo-resumo">RESUMO</h4>
+    <h4 class="card-titulo-resumo">Resumo</h4>
 
     <div class="content-body-resumo">
       <div class="content-item-resumo">
