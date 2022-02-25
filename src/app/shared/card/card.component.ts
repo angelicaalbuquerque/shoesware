@@ -12,8 +12,8 @@ export class CardComponent implements OnInit {
   @Input() cardImg: string = '';
   @Input() cardColour: string = '';
   @Input() cardSize: number = 0;
-  @Input() oldPrice: number = 0;
-  @Input() newPrice: number = 0;
+  @Input() precoAntigo: number = 0;
+  @Input() precoAtual: number = 0;
 
   constructor(private _carrinhoService: CarrinhoService) {}
 
@@ -25,8 +25,8 @@ export class CardComponent implements OnInit {
         nome: this.cardTitulo,
         cor: this.cardColour,
         tamanho: this.cardSize,
-        preco: this.newPrice,
-        precoAntigo: this.oldPrice,
+        preco: this.precoAtual,
+        precoAntigo: this.precoAntigo,
         imagem: this.cardImg,
       },
       quantidade: 1,
