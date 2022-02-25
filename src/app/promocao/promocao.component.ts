@@ -14,7 +14,7 @@ export class PromocaoComponent implements OnInit {
       precoAntigo: 319.99,
       precoAtual: 219.99,
       tamanho: 36,
-      cardColour: 'Branco',
+      cor: 'Branco',
     },
     {
       mostrarPromocao: true,
@@ -23,7 +23,7 @@ export class PromocaoComponent implements OnInit {
       precoAntigo: 24.99,
       precoAtual: 19.99,
       tamanho: 36,
-      cardColour: 'Cinza Mescla',
+      cor: 'Cinza Mescla',
     },
   ];
 

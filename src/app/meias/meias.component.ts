@@ -14,7 +14,7 @@ export class MeiasComponent implements OnInit {
       precoAntigo: 24.99,
       precoAtual: 19.99,
       tamanho: 36,
-      cardColour: 'Cinza Mescla',
+      cor: 'Cinza Mescla',
     },
     {
       mostrarPromocao: false,
@@ -23,7 +23,7 @@ export class MeiasComponent implements OnInit {
       precoAntigo: 24.99,
       precoAtual: 19.99,
       tamanho: 42,
-      cardColour: 'Branco',
+      cor: 'Branco',
     },
   ];
 

@@ -14,7 +14,7 @@ export class TenisComponent implements OnInit {
       precoAntigo: 319.99,
       precoAtual: 219.99,
       tamanho: 36,
-      cardColour: 'Branco',
+      cor: 'Branco',
     },
     {
       mostrarPromocao: false,
@@ -23,7 +23,7 @@ export class TenisComponent implements OnInit {
       precoAntigo: 249.99,
       precoAtual: 199.99,
       tamanho: 36,
-      cardColour: 'Preto',
+      cor: 'Preto',
     },
     {
       mostrarPromocao: false,
@@ -32,7 +32,7 @@ export class TenisComponent implements OnInit {
       precoAntigo: 249.99,
       precoAtual: 199.99,
       tamanho: 36,
-      cardColour: 'Azul',
+      cor: 'Azul',
     },
   ];
 

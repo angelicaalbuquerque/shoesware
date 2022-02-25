@@ -10,7 +10,7 @@ export class CardComponent implements OnInit {
   @Input('mostrarPromocao') mostrarPromocao: boolean = false;
   @Input() titulo: string = '';
   @Input() cardImg: string = '';
-  @Input() cardColour: string = '';
+  @Input() cor: string = '';
   @Input() tamanho: number = 0;
   @Input() precoAntigo: number = 0;
   @Input() precoAtual: number = 0;
@@ -23,7 +23,7 @@ export class CardComponent implements OnInit {
     this._carrinhoService.adicionarProduto({
       produto: {
         nome: this.titulo,
-        cor: this.cardColour,
+        cor: this.cor,
         tamanho: this.tamanho,
         preco: this.precoAtual,
         precoAntigo: this.precoAntigo,

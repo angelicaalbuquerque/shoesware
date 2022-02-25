@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
       titulo: 'Tênis Nike Revolution 5 - Feminino',
       precoAntigo: 319.99,
       precoAtual: 219.99,
-      cardColour: 'Branco',
+      cor: 'Branco',
       tamanho: 36,
     },
     {
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       titulo: 'Meia Asics Single Tech - Adulto',
       precoAntigo: 24.99,
       precoAtual: 19.99,
-      cardColour: 'Cinza Mescla',
+      cor: 'Cinza Mescla',
       tamanho: 36,
     },
     {
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       titulo: 'Tênis Adidas Lite Racer - Masculino',
       precoAntigo: 249.99,
       precoAtual: 199.99,
-      cardColour: 'Preto',
+      cor: 'Preto',
       tamanho: 36,
     },
     {
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
       titulo: 'Tênis Puma - Masculino',
       precoAntigo: 249.99,
       precoAtual: 199.99,
-      cardColour: 'Azul',
+      cor: 'Azul',
       tamanho: 36,
     },
   ];
