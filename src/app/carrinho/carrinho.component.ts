@@ -17,7 +17,6 @@ export class CarrinhoComponent implements OnInit {
 
   ngOnInit(): void {
     this.carrinhoService.getCarrinho().subscribe((carrinho) => {
-      console.log(carrinho);
       this.carrinho = carrinho;
 
       this.calcular();

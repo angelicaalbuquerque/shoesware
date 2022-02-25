@@ -13,10 +13,7 @@ export class HeadernavComponent implements OnInit {
   constructor(private carrinhoService: CarrinhoService) {}
 
   ngOnInit(): void {
-    console.log(this.carrinhoService);
     this.carrinhoService.getCarrinho().subscribe((carrinho) => {
-      console.log('x', carrinho);
-      // this.totalItensCarrinho = carrinho.length;
       this.totalItensCarrinho = carrinho.reduce(
         (acc: any, curr: any) => acc + curr.quantidade,
         0
