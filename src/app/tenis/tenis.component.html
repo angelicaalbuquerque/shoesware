@@ -2,10 +2,11 @@
 
 <div class="card-lista">
   <app-card
-    *ngFor="let cardItem of tenisList"
+    *ngFor="let cardItem of tenisLista"
     [mostrarPromocao]="cardItem.mostrarPromocao"
     [titulo]="cardItem.titulo"
     [cardImg]="cardItem.imgUrl"
+    [imagemDescricao]="cardItem.imagemDescricao"
     [precoAntigo]="cardItem.precoAntigo"
     [precoAtual]="cardItem.precoAtual"
     [tamanho]="cardItem.tamanho"
