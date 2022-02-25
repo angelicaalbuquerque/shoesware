@@ -1,5 +1,7 @@
-/* RESET CSS */
+$lightGray1: #f7f7f7;
+$lightBlue: #1987e8;
 
+/* RESET CSS */
 * {
   box-sizing: border-box;
 }
@@ -29,16 +31,14 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: $lightGray1;
 }
 
 a {
   text-decoration: none;
-  color: #1987e8;
+  color: $lightBlue;
 }
 
 button {
   cursor: pointer;
 }
-
-/* SIDENAV */
