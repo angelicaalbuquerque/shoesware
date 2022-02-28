@@ -33,16 +33,16 @@ Pode ser visto [aqui](https://shoesware.vercel.app/).
 
 ```
 # Clone este repositório
-git clone https://github.com/angelicaalbuquerque/shoesware
+$ git clone https://github.com/angelicaalbuquerque/shoesware
 
 # Acesse este repositório
-cd shoesware
+$ cd shoesware
 
 # Instale as dependências
-npm install
+$ npm install
 
 # Execute a aplicação
-ng s
+$ ng s
 
 # rodando na porta 4200
 ```
