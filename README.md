@@ -32,7 +32,19 @@ Pode ser visto [aqui](https://shoesware.vercel.app/).
 ## 🧭 Como rodar o projeto
 
 ```
+# Clone este repositório
+git clone https://github.com/angelicaalbuquerque/shoesware
+
+# Acesse este repositório
+cd shoesware
+
+# Instale as dependências
+npm install
+
+# Execute a aplicação
 ng s
+
+# rodando na porta 4200
 ```
 
 ## 🚀 Tecnologias
